@@ -1,2 +1,2 @@
-# kafka-examples
-Provides an example on a consumer, producer an kafka cluser
+# kafka-cluster
+Enable starting up a kafka cluster
