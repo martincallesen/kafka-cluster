@@ -13,3 +13,6 @@ In the root of the project issue command:
 Then you will be able to access the control center in the kafka cluster on localhost:9021
 * Open a browser and navigate to http://localhost:9021/clusters
 
+If virtualbox for some reason has been stopped kafka cluster needs to be booted up againg issues command:
+* vagrant provision
+
