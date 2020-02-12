@@ -1,0 +1,11 @@
+#################################################
+# DO Community Playbooks: Kafka Cluster
+#################################################
+- hosts: all
+  become: yes
+  vars_files:
+    - vars/default.yml
+
+  tasks:
+    - name: Docker
+      include_tasks: docker_ubuntu1804/playbook.yml
