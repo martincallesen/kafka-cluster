@@ -7,5 +7,7 @@
     - vars/default.yml
 
   tasks:
-    - name: Docker
-      include_tasks: docker_ubuntu1804/playbook.yml
+    - name: Install Docker Compose
+      include_tasks: docker-compose/playbook.yml
+    - name: Install Kafka Cluster
+      include_tasks: kafka-cluster/playbook.yml

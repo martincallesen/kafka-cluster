@@ -1,0 +1,15 @@
+######################################################################################################
+# DO Community Playbooks: Kafka-cluster
+# Following the Online guide at https://docs.confluent.io/current/quickstart/ce-docker-quickstart.html
+######################################################################################################
+- name: Clone Docker Confluent Platform from github
+  git:
+    repo: https://github.com/confluentinc/examples
+    version: 5.4.0-post
+    dest: /home/vagrant/kafka-cluster
+    accept_hostkey: yes
+
+- name: Build the Docker Confluent Platform
+  docker_compose:
+    project_src: /home/vagrant/kafka-cluster/cp-all-in-one
+  register: output
