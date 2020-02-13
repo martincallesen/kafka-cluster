@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 8083, host: 8083
  # Kafka rest-proxy
   config.vm.network "forwarded_port", guest: 8082, host: 8082
- # Kafka rest-proxy
-  config.vm.network "forwarded_port", guest: 8082, host: 8082
+ # Kafka schema-registry
+  config.vm.network "forwarded_port", guest: 8081, host: 8081
 
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "provisioning/playbook.yml"
